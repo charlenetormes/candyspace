@@ -1,0 +1,135 @@
+export const calculatorButtons = [
+    {
+        primary: true,
+        secondary: false,
+        tertiary: false,
+        singleColumn: true,
+        text: "AC",
+    },
+    {
+        primary: true,
+        secondary: false,
+        tertiary: false,
+        singleColumn: true,
+        icon: "/svg/abs.svg",
+    },
+    {
+        primary: true,
+        secondary: false,
+        tertiary: false,
+        singleColumn: true,
+        icon: "/svg/modulo.svg",
+    },
+    {
+        primary: false,
+        secondary: false,
+        tertiary: true,
+        singleColumn: true,
+        icon: "/svg/divide.svg",
+    }, //2nd
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: "1",
+    },
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: "2",
+    },
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: "3",
+    },
+    {
+        primary: false,
+        secondary: false,
+        tertiary: true,
+        singleColumn: true,
+        icon: "/svg/multiplication.svg",
+    }, //3rd
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: "4",
+    },
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: "5",
+    },
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: "6",
+    },
+    {
+        primary: false,
+        secondary: false,
+        tertiary: true,
+        singleColumn: true,
+        icon: "/svg/minus.svg",
+    }, //4th
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: "7",
+    },
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: "8",
+    },
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: "9",
+    },
+    {
+        primary: false,
+        secondary: false,
+        tertiary: true,
+        singleColumn: true,
+        icon: "/svg/plus.svg",
+    }, //5th
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: false,
+        value: "0",
+    },
+    {
+        primary: false,
+        secondary: true,
+        tertiary: false,
+        singleColumn: true,
+        value: ".",
+    },
+    {
+        primary: false,
+        secondary: false,
+        tertiary: true,
+        singleColumn: true,
+        icon: "/svg/equals.svg",
+    }, //6th
+];

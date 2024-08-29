@@ -2,17 +2,20 @@
 export default defineNuxtConfig({
     compatibilityDate: "2024-04-03",
     devtools: { enabled: true },
-    css: ["@/assets/css/main.css", "vuetify/styles"],
-    build: {
-        transpile: ["vuetify"],
-        postcss: {
-            postcssOptions: {
-                plugins: {
-                    tailwindcss: {},
-                    autoprefixer: {},
-                },
-            },
+
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
         },
     },
+
+    css: ["@/assets/css/main.css", "@/assets/css/global.css", "vuetify/styles"],
+
+    build: {
+        transpile: ["vuetify"],
+    },
+
     plugins: ["@/plugins/vuetify"],
+    modules: ["@pinia/nuxt", "@vueuse/motion/nuxt"],
 });
