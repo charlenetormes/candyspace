@@ -1,15 +1,55 @@
 <template>
     <div class="p-6 bg-custom-gray-100 cars-container">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8">
-            <FormCardsCar v-for="(car, i) in cars" :key="i" v-bind="car" />
+            <FormCardsCar
+                v-for="(car, i) in cars"
+                :key="i"
+                @handleClick="handleClick"
+                v-bind="car"
+                v-motion="{
+                    initial: { opacity: 0, y: 50 },
+                    enter: {
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                            delay: (i + 1) * 100,
+                            duration: 500,
+                        },
+                    },
+                    leave: {
+                        opacity: 0,
+                        y: -50,
+                        transition: {
+                            delay: 300,
+                            duration: 500,
+                        },
+                    },
+                }"
+            />
         </div>
+
+        <BaseDrawer :car="activeCar" />
     </div>
 </template>
 
 <script lang="ts" setup>
 import { useAppStore } from "../stores/app.store";
+import { useHead } from "@vueuse/head";
 const appStore = useAppStore();
 const cars = ref([]);
+const activeCar = ref();
+
+useHead({
+    title: "Used Cars Listing",
+    meta: [
+        {
+            name: "description",
+            content:
+                "Displays a list of used cars listing in the area with filters",
+        },
+        { property: "og:title", content: "Used Cars Listing" },
+    ],
+});
 
 definePageMeta({
     layout: "listing",
@@ -21,6 +61,11 @@ onMounted(async () => {
     const responseJson = await response?.json();
     cars.value = responseJson?.cars;
 });
+
+const handleClick = (car: ICar) => {
+    appStore.toggleSideBar();
+    activeCar.value = car;
+};
 </script>
 
 <style scoped>

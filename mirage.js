@@ -50,11 +50,15 @@ export function makeServer({ environment = "development" } = {}) {
                 reviews() {
                     return generateRandomNumber(200);
                 },
-                thumbnailImage() {
+                thumbnailImage(i) {
                     if (this.model === "Civic") {
-                        return "/images/cars/civic.jpg";
+                        const models = [
+                            "/images/cars/city.jpg",
+                            "/images/cars/blue-civic.jpg",
+                        ];
+                        return models[i % models.length];
                     } else if (this.model === "City") {
-                        return "/images/cars/city.jpg";
+                        return "/images/cars/civic.jpg";
                     } else if (this.model === "BRV") {
                         return "/images/cars/black-brv.jpg";
                     } else if (this.model === "Everest") {
@@ -65,13 +69,52 @@ export function makeServer({ environment = "development" } = {}) {
                     // Return an array of image URLs
                     if (this.model === "City") {
                         return [
-                            "https://via.placeholder.com/150?text=Image1",
-                            "https://via.placeholder.com/150?text=Image2",
-                            "https://via.placeholder.com/150?text=Image3",
+                            "/images/cars/city/city1.jpg",
+                            "/images/cars/city/city2.jpg",
+                            "/images/cars/city/city3.jpg",
+                        ];
+                    } else if (this.model === "Civic") {
+                        return [
+                            "/images/cars/civic/civic1.jpg",
+                            "/images/cars/civic/civic2.jpg",
+                            "/images/cars/civic/civic3.jpg",
+                        ];
+                    } else if (this.model === "Everest") {
+                        return [
+                            "/images/cars/everest/ford1.jpeg",
+                            "/images/cars/everest/ford2.jpeg",
+                            "/images/cars/everest/ford3.jpeg",
+                        ];
+                    } else if (this.model === "BRV") {
+                        return [
+                            "/images/cars/brv/brv1.jpg",
+                            "/images/cars/brv/brv2.jpg",
+                            "/images/cars/brv/brv3.jpg",
                         ];
                     } else {
                         return [];
                     }
+                },
+                description() {
+                    const sentences = [
+                        "The quick brown fox jumps over the lazy dog.",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "To be or not to be, that is the question.",
+                        "All human beings are born free and equal in dignity and rights.",
+                        "A journey of a thousand miles begins with a single step.",
+                        "The only thing we have to fear is fear itself.",
+                        "I think, therefore I am.",
+                        "In the beginning, God created the heavens and the earth.",
+                        "The best way to predict the future is to invent it.",
+                        "To infinity and beyond!",
+                    ];
+
+                    // Shuffle the sentences array and select the first 'sentenceCount' sentences
+                    const shuffled = sentences.sort(() => 0.5 - Math.random());
+                    const selectedSentences = shuffled.slice(0, 3);
+
+                    // Join the selected sentences into a single paragraph
+                    return selectedSentences.join(" ");
                 },
             }),
         },

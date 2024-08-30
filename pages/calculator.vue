@@ -62,7 +62,20 @@
 </template>
 <script lang="ts" setup>
 import { useAppStore } from "../stores/app.store";
+import { useHead } from "@vueuse/head";
 const appStore = useAppStore();
+
+useHead({
+    title: "Calculator Page",
+    meta: [
+        {
+            name: "description",
+            content:
+                "Use the calculator to perform basic arithmertic operations similar to the iphone app",
+        },
+        { property: "og:title", content: "Calculator" },
+    ],
+});
 
 onMounted(() => {
     appStore.setPage("calculator");

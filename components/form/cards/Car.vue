@@ -1,6 +1,7 @@
 <template>
     <div
         class="select-none flex flex-col justify-items-center gap-4 bg-white hover:transition-all hover:duration-100 hover:bg-slate-500 drop-shadow-md rounded-lg p-4 cursor-pointer"
+        @click="handleClick"
     >
         <div class="flex w-full justify-between">
             <FormCardsRating :rating="rating" :reviews="reviews" />
@@ -59,9 +60,10 @@ import {
     AdjustmentsVerticalIcon,
 } from "@heroicons/vue/24/outline";
 
+const emits = defineEmits(["handleClick"]);
 const favorite = ref(false);
 
-defineProps({
+const props = defineProps({
     make: { type: String, default: "Honda" },
     model: { type: String, default: "Civic" },
     rating: { type: Number, default: 109 },
@@ -70,10 +72,16 @@ defineProps({
     mileage: { type: Number, default: 4645 },
     year: { type: Number, default: 2012 },
     thumbnailImage: { type: String, default: "/images/cars/city.jpg" },
+    description: { type: String, default: "Lorem Ipsum" },
+    images: { type: Array as PropType<string[]>, default: [] },
 });
 
 const imgAttrs = {
     draggable: "false",
     style: "-webkit-user-drag: none; user-drag: none;",
+};
+
+const handleClick = () => {
+    emits("handleClick", props);
 };
 </script>
