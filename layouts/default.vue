@@ -8,7 +8,6 @@
 <style scoped>
 /* Add your styles here */
 header {
-    background-color: #333;
     color: white;
     padding: 1rem;
 }

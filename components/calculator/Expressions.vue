@@ -17,7 +17,7 @@
                     { ' text-5xl': main },
                 ]"
             >
-                <span class="text-custom-white-500 font-medium">{{
+                <span class="text-custom-white-500 font-medium text-5xl">{{
                     formatNumberWithComma(display)
                 }}</span>
             </div>

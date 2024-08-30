@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-white">
+    <header class="bg-custom-orange-100">
         <nav
             class="flex items-center justify-between p-6 lg:px-8"
             aria-label="Global"
@@ -9,7 +9,7 @@
                     <span class="sr-only">Your Company</span>
                     <img
                         class="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=400"
                         alt=""
                     />
                 </a>
@@ -29,7 +29,7 @@
                     v-for="item in navigation"
                     :key="item.name"
                     :to="item.href"
-                    class="text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200 hover:transition-all hover:rounded-lg p-4"
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:bg-custom-orange-400 hover:transition-all hover:rounded-lg p-4"
                     >{{ item.name }}</nuxt-link
                 >
             </div>
@@ -75,7 +75,7 @@
                                 v-for="item in navigation"
                                 :key="item.name"
                                 :href="item.href"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-custom-orange-400"
                                 >{{ item.name }}</a
                             >
                         </div>

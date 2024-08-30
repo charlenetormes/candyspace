@@ -17,7 +17,11 @@ module.exports = {
                 },
                 "custom-white": { 500: "#D4D4D2", 400: "#eaeae9" },
                 "custom-dark-gray": { 500: "#505050", 400: "#929292" },
-                "custom-orange": { 500: "#FF9500", 400: "#ffbd60" },
+                "custom-orange": {
+                    500: "#FF9500",
+                    400: "#ffbd60",
+                    100: "#EFE8DE",
+                },
             },
         },
     },
