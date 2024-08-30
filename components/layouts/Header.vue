@@ -1,12 +1,18 @@
 <template>
-    <header class="bg-custom-orange-100">
+    <header
+        :class="[
+            { 'bg-custom-orange-100': page === 'calculator' },
+            { 'bg-white drop-shadow-md': page === 'cars' },
+            'transition-all duration-300',
+        ]"
+    >
         <nav
             class="flex items-center justify-between p-6 lg:px-8"
             aria-label="Global"
         >
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
+                    <span class="sr-only">Charlene Tormes</span>
                     <img
                         class="h-8 w-auto"
                         src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=400"
@@ -34,11 +40,7 @@
                 >
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a
-                    href="#"
-                    class="text-sm font-semibold leading-6 text-gray-900"
-                    >Log in <span aria-hidden="true">&rarr;</span></a
-                >
+                <!-- empty -->
             </div>
         </nav>
         <Dialog
@@ -97,6 +99,12 @@
 import { ref } from "vue";
 import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { useAppStore } from "../../stores/app.store";
+import { storeToRefs } from "pinia";
+
+const appStore = useAppStore();
+const { page } = storeToRefs(appStore);
+const route = useRoute();
 
 const navigation = [
     { name: "Calculator", href: "/calculator" },

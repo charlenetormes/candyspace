@@ -60,7 +60,14 @@
         </div>
     </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useAppStore } from "../stores/app.store";
+const appStore = useAppStore();
+
+onMounted(() => {
+    appStore.setPage("calculator");
+});
+</script>
 
 <style scoped>
 .calculator-container {
