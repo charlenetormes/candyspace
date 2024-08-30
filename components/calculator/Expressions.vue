@@ -26,6 +26,7 @@
 </template>
 
 <script lang="ts" setup>
+import { formatNumberWithComma } from "../../utilities/helpers";
 interface Props {
     main: Boolean;
     display: string;
@@ -35,8 +36,4 @@ defineProps({
     main: { type: Boolean, default: true },
     display: { type: String, default: "0" },
 }) satisfies Props;
-
-const formatNumberWithComma = (value: number): string => {
-    return new Intl.NumberFormat("en-US").format(value);
-};
 </script>

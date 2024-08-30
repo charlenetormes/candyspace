@@ -16,6 +16,6 @@ export default defineNuxtConfig({
         transpile: ["vuetify"],
     },
 
-    plugins: ["@/plugins/vuetify"],
+    plugins: ["@/plugins/vuetify", "@/plugins/mirage.ts"],
     modules: ["@pinia/nuxt", "@vueuse/motion/nuxt"],
 });
