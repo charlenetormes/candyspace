@@ -13,11 +13,13 @@
             </div>
             <div
                 :class="[
-                    'flex gap-[9px] text-[12px] justify-end select-none',
+                    'flex gap-[9px] text-[12px] justify-end select-none overflow-hidden',
                     { ' text-5xl': main },
                 ]"
             >
-                <span class="text-custom-white-500 font-medium">0</span>
+                <span class="text-custom-white-500 font-medium">{{
+                    formatNumberWithComma(display)
+                }}</span>
             </div>
         </div>
     </div>
@@ -26,9 +28,15 @@
 <script lang="ts" setup>
 interface Props {
     main: Boolean;
+    display: string;
 }
 
 defineProps({
     main: { type: Boolean, default: true },
+    display: { type: String, default: "0" },
 }) satisfies Props;
+
+const formatNumberWithComma = (value: number): string => {
+    return new Intl.NumberFormat("en-US").format(value);
+};
 </script>

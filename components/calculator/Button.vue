@@ -28,6 +28,7 @@ interface Props {
     value: string;
     text: string;
     icon: string;
+    action: string;
 }
 
 defineProps({
@@ -38,6 +39,7 @@ defineProps({
     value: { type: String, default: null },
     text: { type: String, default: null },
     icon: { type: String, default: null },
+    action: { type: String, default: "number" },
 }) satisfies Props;
 
 const imgAttrs = {

@@ -5,6 +5,7 @@ export const calculatorButtons = [
         tertiary: false,
         singleColumn: true,
         text: "AC",
+        action: "clear",
     },
     {
         primary: true,
@@ -12,6 +13,7 @@ export const calculatorButtons = [
         tertiary: false,
         singleColumn: true,
         icon: "/svg/abs.svg",
+        action: "absolute",
     },
     {
         primary: true,
@@ -19,6 +21,7 @@ export const calculatorButtons = [
         tertiary: false,
         singleColumn: true,
         icon: "/svg/modulo.svg",
+        action: "percentage",
     },
     {
         primary: false,
@@ -26,6 +29,7 @@ export const calculatorButtons = [
         tertiary: true,
         singleColumn: true,
         icon: "/svg/divide.svg",
+        action: "division",
     }, //2nd
     {
         primary: false,
@@ -54,6 +58,7 @@ export const calculatorButtons = [
         tertiary: true,
         singleColumn: true,
         icon: "/svg/multiplication.svg",
+        action: "multiplication",
     }, //3rd
     {
         primary: false,
@@ -82,6 +87,7 @@ export const calculatorButtons = [
         tertiary: true,
         singleColumn: true,
         icon: "/svg/minus.svg",
+        action: "subtraction",
     }, //4th
     {
         primary: false,
@@ -110,6 +116,7 @@ export const calculatorButtons = [
         tertiary: true,
         singleColumn: true,
         icon: "/svg/plus.svg",
+        action: "addition",
     }, //5th
     {
         primary: false,
@@ -131,5 +138,6 @@ export const calculatorButtons = [
         tertiary: true,
         singleColumn: true,
         icon: "/svg/equals.svg",
+        action: "equals",
     }, //6th
 ];
