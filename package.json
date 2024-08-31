@@ -1,29 +1,31 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "@headlessui/vue": "^1.7.22",
-    "@heroicons/vue": "^2.1.5",
-    "@pinia/nuxt": "^0.5.4",
-    "@vueuse/head": "^2.0.0",
-    "@vueuse/motion": "^2.2.3",
-    "nuxt": "^3.13.0",
-    "pinia": "^2.2.2",
-    "vue": "^3.4.38",
-    "vuetify": "^3.7.0-beta.1"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "miragejs": "^0.2.0-alpha.3",
-    "postcss": "^8.4.41",
-    "tailwindcss": "^3.4.10"
-  }
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "deploy": "gh-pages -d .output/public"
+    },
+    "dependencies": {
+        "@headlessui/vue": "^1.7.22",
+        "@heroicons/vue": "^2.1.5",
+        "@pinia/nuxt": "^0.5.4",
+        "@vueuse/head": "^2.0.0",
+        "@vueuse/motion": "^2.2.3",
+        "nuxt": "^3.13.0",
+        "pinia": "^2.2.2",
+        "vue": "^3.4.38",
+        "vuetify": "^3.7.0-beta.1"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.20",
+        "gh-pages": "^6.1.1",
+        "miragejs": "^0.2.0-alpha.3",
+        "postcss": "^8.4.41",
+        "tailwindcss": "^3.4.10"
+    }
 }
