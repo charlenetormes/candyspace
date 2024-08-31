@@ -42,10 +42,10 @@
 </template>
 
 <script lang="ts" setup>
-import { years } from "../../../utilities/data";
+import { years } from "@/utilities/data";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { ChevronUpIcon } from "@heroicons/vue/20/solid";
-import { useCarStore } from "../../../stores/car.store";
+import { useCarStore } from "@/stores/car.store";
 import { storeToRefs } from "pinia";
 
 const carStore = useCarStore();

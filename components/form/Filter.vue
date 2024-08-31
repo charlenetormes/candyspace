@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useCarStore } from "../../stores/car.store";
+import { useCarStore } from "@/stores/car.store";
 import { storeToRefs } from "pinia";
 const carStore = useCarStore();
 const { min, max, filters } = storeToRefs(carStore);

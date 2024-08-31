@@ -126,9 +126,9 @@ import {
     TransitionRoot,
 } from "@headlessui/vue";
 import { XMarkIcon } from "@heroicons/vue/24/outline";
-import { useAppStore } from "../../stores/app.store";
+import { useAppStore } from "@/stores/app.store";
 import { storeToRefs } from "pinia";
-import { formatNumberWithComma } from "../../utilities/helpers";
+import { formatNumberWithComma } from "@/utilities/helpers";
 const appStore = useAppStore();
 const { sidebar } = storeToRefs(appStore);
 

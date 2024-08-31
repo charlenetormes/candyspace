@@ -99,15 +99,16 @@
 import { ref } from "vue";
 import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { useAppStore } from "../../stores/app.store";
+import { useAppStore } from "@/stores/app.store";
 import { storeToRefs } from "pinia";
 
 const appStore = useAppStore();
 const { page } = storeToRefs(appStore);
 const route = useRoute();
+const config = useRuntimeConfig();
 
 const navigation = [
-    { name: "Calculator", href: "/calculator" },
+    { name: "Calculator", href: `/calculator` },
     { name: "Cars", href: "/cars" },
 ];
 

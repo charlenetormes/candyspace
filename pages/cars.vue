@@ -39,8 +39,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppStore } from "../stores/app.store";
-import { useCarStore } from "../stores/car.store";
+import { useAppStore } from "@/stores/app.store";
+import { useCarStore } from "@/stores/car.store";
 import { useHead } from "@vueuse/head";
 import { storeToRefs } from "pinia";
 const appStore = useAppStore();

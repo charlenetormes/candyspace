@@ -19,8 +19,8 @@
 </template>
 
 <script lang="ts" setup>
-import { calculatorButtons } from "../../utilities/data";
-import { useCalculatorStore } from "../../stores/calculator.store";
+import { calculatorButtons } from "@/utilities/data";
+import { useCalculatorStore } from "@/stores/calculator.store";
 import { storeToRefs } from "pinia";
 
 const calculatorStore = useCalculatorStore();

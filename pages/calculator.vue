@@ -61,8 +61,8 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { buildUrl } from "../utilities/helpers";
-import { useAppStore } from "../stores/app.store";
+import { buildUrl } from "@/utilities/helpers";
+import { useAppStore } from "@/stores/app.store";
 import { useHead } from "@vueuse/head";
 const appStore = useAppStore();
 

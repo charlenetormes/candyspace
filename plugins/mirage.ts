@@ -1,4 +1,4 @@
-import { makeServer } from "../mirage";
+import { makeServer } from "@/mirage";
 
 export default defineNuxtPlugin(() => {
     makeServer({ environment: "development" });
