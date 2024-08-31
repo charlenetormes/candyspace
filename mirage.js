@@ -32,7 +32,7 @@ export function makeServer({ environment = "development" } = {}) {
                     return models[i % models.length];
                 },
                 year() {
-                    return Math.floor(Math.random() * (2022 - 2000 + 1)) + 2000;
+                    return Math.floor(Math.random() * (2024 - 2000 + 1)) + 2000;
                 },
                 price() {
                     return (

@@ -6,7 +6,11 @@
         </div>
 
         <div class="flex justify-between w-full">
-            <FormInputsSearch v-model="searchQuery" />
+            <FormInputsSearch
+                placeholder="Search make, model, or year"
+                v-model="searchQuery"
+                :modelValue="searchQuery"
+            />
         </div>
 
         <div class="flex justify-between w-full">
@@ -14,16 +18,65 @@
         </div>
 
         <div class="flex justify-between w-full">
-            <FormInputsSlider label="Price" />
+            <FormInputsSlider
+                :min="min"
+                :max="max"
+                label="Price"
+                ref="sliderRef"
+                v-model="slider"
+            />
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
+import { useCarStore } from "../../stores/car.store";
+import { storeToRefs } from "pinia";
+const carStore = useCarStore();
+const { min, max, filters } = storeToRefs(carStore);
 const searchQuery = ref();
+const sliderRef = ref();
+const slider = ref([0, 1500]);
+
 const reset = () => {
-    alert(`reset! ${searchQuery.value}`);
+    carStore.reset();
+    searchQuery.value = "";
+    slider.value = [min.value, max.value];
+    sliderRef.value.setValue([min.value, max.value]);
 };
+
+/**
+ *  Watch for search query changes so we can filter the results
+ */
+watch(
+    () => searchQuery.value,
+    (newVal) => {
+        filters.value.query = newVal;
+    }
+);
+
+/**
+ * Watch for changes in the min - max price to adjust range slider
+ */
+watch(
+    () => max.value,
+    () => {
+        sliderRef.value.setValue([min.value, max.value]);
+        slider.value = [min.value, max.value];
+    }
+);
+
+/**
+ * Watch for changes in the slider price to adjust car listings
+ */
+watch(
+    () => slider.value,
+    () => {
+        filters.value.min = slider.value?.[0];
+
+        filters.value.max = slider.value?.[1];
+    }
+);
 </script>
 
 <style scoped></style>

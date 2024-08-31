@@ -1,8 +1,11 @@
 <template>
     <div class="p-6 bg-custom-gray-100 cars-container">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8">
+        <div
+            v-if="getFilteredCars?.length > 0"
+            class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8"
+        >
             <FormCardsCar
-                v-for="(car, i) in cars"
+                v-for="(car, i) in getFilteredCars"
                 :key="i"
                 @handleClick="handleClick"
                 v-bind="car"
@@ -27,6 +30,9 @@
                 }"
             />
         </div>
+        <div v-else>
+            <h1>No results found</h1>
+        </div>
 
         <BaseDrawer :car="activeCar" />
     </div>
@@ -34,9 +40,12 @@
 
 <script lang="ts" setup>
 import { useAppStore } from "../stores/app.store";
+import { useCarStore } from "../stores/car.store";
 import { useHead } from "@vueuse/head";
+import { storeToRefs } from "pinia";
 const appStore = useAppStore();
-const cars = ref([]);
+const carStore = useCarStore();
+const { cars, getFilteredCars } = storeToRefs(carStore);
 const activeCar = ref();
 
 useHead({
@@ -59,7 +68,10 @@ onMounted(async () => {
     appStore.setPage("cars");
     const response = await fetch("/api/cars");
     const responseJson = await response?.json();
-    cars.value = responseJson?.cars;
+    carStore.setCars(responseJson?.cars ?? []);
+
+    //get max and min
+    carStore.setMaxMin();
 });
 
 const handleClick = (car: ICar) => {

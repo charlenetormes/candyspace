@@ -1,6 +1,6 @@
 <template>
     <div
-        class="select-none flex flex-col justify-items-center gap-4 bg-white hover:transition-all hover:duration-100 hover:bg-slate-500 drop-shadow-md rounded-lg p-4 cursor-pointer"
+        class="select-none flex flex-col justify-items-center gap-4 hover:transition-all hover:duration-100 drop-shadow-md rounded-lg p-4 cursor-pointer card-container"
         @click="handleClick"
     >
         <div class="flex w-full justify-between">
@@ -85,3 +85,13 @@ const handleClick = () => {
     emits("handleClick", props);
 };
 </script>
+
+<style scoped>
+.card-container {
+    background: white;
+}
+
+.card-container:hover {
+    background: #f8f9fa;
+}
+</style>

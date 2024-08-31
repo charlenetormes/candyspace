@@ -13,9 +13,7 @@
                     />
                 </DisclosureButton>
                 <DisclosurePanel class="px-4 pb-2 pt-4 text-sm text-gray-500">
-                    If you're unhappy with your purchase for any reason, email
-                    us within 90 days and we'll refund you in full, no questions
-                    asked.
+                    <FormInputsCheckbox v-model="make" ref="makeRef" />
                 </DisclosurePanel>
             </Disclosure>
             <Disclosure as="div" class="mt-2" v-slot="{ open }">
@@ -28,8 +26,15 @@
                         class="h-5 w-5 text-orange-500"
                     />
                 </DisclosureButton>
-                <DisclosurePanel class="px-4 pb-2 pt-4 text-sm text-gray-500">
-                    No.
+                <DisclosurePanel
+                    class="px-4 pb-2 pt-4 text-sm text-gray-500"
+                    @click="reset"
+                >
+                    <FormInputsCheckbox
+                        :options="years"
+                        v-model="yearsValue"
+                        ref="yearRef"
+                    />
                 </DisclosurePanel>
             </Disclosure>
         </div>
@@ -37,8 +42,44 @@
 </template>
 
 <script lang="ts" setup>
+import { years } from "../../../utilities/data";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { ChevronUpIcon } from "@heroicons/vue/20/solid";
+import { useCarStore } from "../../../stores/car.store";
+import { storeToRefs } from "pinia";
+
+const carStore = useCarStore();
+const { filters, isResetTriggered } = storeToRefs(carStore);
+
+const yearsValue = ref<number[]>([]);
+const make = ref<string[]>([]);
+const makeRef = ref();
+const yearRef = ref();
+
+watch(
+    () => isResetTriggered.value,
+    (newVal) => {
+        if (newVal) {
+            makeRef.value.reset();
+            yearRef.value.reset();
+            isResetTriggered.value = false;
+        }
+    }
+);
+
+watch(
+    () => make.value,
+    (newVal) => {
+        filters.value.make = newVal;
+    }
+);
+
+watch(
+    () => yearsValue.value,
+    (newVal) => {
+        filters.value.year = newVal;
+    }
+);
 </script>
 
 <style scoped></style>
