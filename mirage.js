@@ -53,43 +53,43 @@ export function makeServer({ environment = "development" } = {}) {
                 thumbnailImage(i) {
                     if (this.model === "Civic") {
                         const models = [
-                            "/images/cars/city.jpg",
-                            "/images/cars/blue-civic.jpg",
+                            "/candyspace/images/cars/city.jpg",
+                            "/candyspace/images/cars/blue-civic.jpg",
                         ];
                         return models[i % models.length];
                     } else if (this.model === "City") {
-                        return "/images/cars/civic.jpg";
+                        return "/candyspace/images/cars/civic.jpg";
                     } else if (this.model === "BRV") {
-                        return "/images/cars/black-brv.jpg";
+                        return "/candyspace/images/cars/black-brv.jpg";
                     } else if (this.model === "Everest") {
-                        return "/images/cars/everest.jpeg";
+                        return "/candyspace/images/cars/everest.jpeg";
                     }
                 },
                 images() {
                     // Return an array of image URLs
                     if (this.model === "City") {
                         return [
-                            "/images/cars/city/city1.jpg",
-                            "/images/cars/city/city2.jpg",
-                            "/images/cars/city/city3.jpg",
+                            "/candyspace/images/cars/city/city1.jpg",
+                            "/candyspace/images/cars/city/city2.jpg",
+                            "/candyspace/images/cars/city/city3.jpg",
                         ];
                     } else if (this.model === "Civic") {
                         return [
-                            "/images/cars/civic/civic1.jpg",
-                            "/images/cars/civic/civic2.jpg",
-                            "/images/cars/civic/civic3.jpg",
+                            "/candyspace/images/cars/civic/civic1.jpg",
+                            "/candyspace/images/cars/civic/civic2.jpg",
+                            "/candyspace/images/cars/civic/civic3.jpg",
                         ];
                     } else if (this.model === "Everest") {
                         return [
-                            "/images/cars/everest/ford1.jpeg",
-                            "/images/cars/everest/ford2.jpeg",
-                            "/images/cars/everest/ford3.jpeg",
+                            "/candyspace/images/cars/everest/ford1.jpeg",
+                            "/candyspace/images/cars/everest/ford2.jpeg",
+                            "/candyspace/images/cars/everest/ford3.jpeg",
                         ];
                     } else if (this.model === "BRV") {
                         return [
-                            "/images/cars/brv/brv1.jpg",
-                            "/images/cars/brv/brv2.jpg",
-                            "/images/cars/brv/brv3.jpg",
+                            "/candyspace/images/cars/brv/brv1.jpg",
+                            "/candyspace/images/cars/brv/brv2.jpg",
+                            "/candyspace/images/cars/brv/brv3.jpg",
                         ];
                     } else {
                         return [];

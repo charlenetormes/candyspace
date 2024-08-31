@@ -12,7 +12,7 @@ export const calculatorButtons = [
         secondary: false,
         tertiary: false,
         singleColumn: true,
-        icon: "/svg/abs.svg",
+        icon: "/candyspace/svg/abs.svg",
         action: "absolute",
     },
     {
@@ -20,7 +20,7 @@ export const calculatorButtons = [
         secondary: false,
         tertiary: false,
         singleColumn: true,
-        icon: "/svg/modulo.svg",
+        icon: "/candyspace/svg/modulo.svg",
         action: "percentage",
     },
     {
@@ -28,7 +28,7 @@ export const calculatorButtons = [
         secondary: false,
         tertiary: true,
         singleColumn: true,
-        icon: "/svg/divide.svg",
+        icon: "/candyspace/svg/divide.svg",
         action: "division",
     }, //2nd
     {
@@ -57,7 +57,7 @@ export const calculatorButtons = [
         secondary: false,
         tertiary: true,
         singleColumn: true,
-        icon: "/svg/multiplication.svg",
+        icon: "/candyspace/svg/multiplication.svg",
         action: "multiplication",
     }, //3rd
     {
@@ -86,7 +86,7 @@ export const calculatorButtons = [
         secondary: false,
         tertiary: true,
         singleColumn: true,
-        icon: "/svg/minus.svg",
+        icon: "/candyspace/svg/minus.svg",
         action: "subtraction",
     }, //4th
     {
@@ -115,7 +115,7 @@ export const calculatorButtons = [
         secondary: false,
         tertiary: true,
         singleColumn: true,
-        icon: "/svg/plus.svg",
+        icon: "/candyspace/svg/plus.svg",
         action: "addition",
     }, //5th
     {
@@ -137,7 +137,7 @@ export const calculatorButtons = [
         secondary: false,
         tertiary: true,
         singleColumn: true,
-        icon: "/svg/equals.svg",
+        icon: "/candyspace/svg/equals.svg",
         action: "equals",
     }, //6th
 ];

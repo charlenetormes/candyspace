@@ -6,6 +6,6 @@
 
 <script lang="ts" setup>
 onMounted(() => {
-    navigateTo("/calculator");
+    navigateTo("/candyspace/calculator");
 });
 </script>

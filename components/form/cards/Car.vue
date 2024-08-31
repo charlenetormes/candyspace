@@ -71,7 +71,10 @@ const props = defineProps({
     price: { type: Number, default: 3000 },
     mileage: { type: Number, default: 4645 },
     year: { type: Number, default: 2012 },
-    thumbnailImage: { type: String, default: "/images/cars/city.jpg" },
+    thumbnailImage: {
+        type: String,
+        default: "/candyspace/images/cars/city.jpg",
+    },
     description: { type: String, default: "Lorem Ipsum" },
     images: { type: Array as PropType<string[]>, default: [] },
 });
