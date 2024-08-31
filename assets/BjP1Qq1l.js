@@ -1,0 +1,1 @@
+import{j as t}from"./DXV5eLVT.js";const r=t("app",{state:()=>({page:"calculator",sidebar:!1}),getters:{getPage(e){return e.page},getSideBar(e){return e.sidebar}},actions:{setPage(e){this.page=e},setSideBar(e){this.sidebar=e},toggleSideBar(){this.sidebar=!this.sidebar}}});export{r as u};
