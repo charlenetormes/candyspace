@@ -17,7 +17,7 @@ You also need to create a .env file inside the root folder of the project
 
 ```bash
 # .env
-APP_BASE_URL="<insert base_url | 'candyspace'>"
+APP_BASE_URL="<insert base_url | '/candyspace'>"
 ```
 
 ## Development Server
