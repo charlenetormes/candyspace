@@ -1,6 +1,6 @@
 # Candyspace Test Task
 
-This is a test task from Candyspace which involves creating 2 pages -- a calculator and a used cars listing page. This project is hosted on Github pages.
+This is a test task from Candyspace which involves creating 2 pages — a calculator and a used cars listing page. This project is hosted on Github pages.
 
 ## Setup
 
