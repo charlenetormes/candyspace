@@ -1,23 +1,23 @@
-# Nuxt 3 Minimal Starter
+# Candyspace Test Task
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a test task from Candyspace which involves creating 2 pages -- a calculator and a used cars listing page. This project is hosted on Github pages.
 
 ## Setup
+
+#### Node Version should be running on `Node V20+`
 
 Make sure to install the dependencies:
 
 ```bash
 # npm
 npm install
+```
 
-# pnpm
-pnpm install
+You also need to create a .env file inside the root folder of the project
 
-# yarn
-yarn install
-
-# bun
-bun install
+```bash
+# .env
+APP_BASE_URL="<insert base_url | 'candyspace'>"
 ```
 
 ## Development Server
@@ -27,33 +27,15 @@ Start the development server on `http://localhost:3000`:
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Deployment
 
-Build the application for production:
+Just run npm run deploy to automatically build and deploy the project to github
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+# Build and Deploy to Github
+npm run deploy
 ```
 
 Locally preview production build:
@@ -61,15 +43,8 @@ Locally preview production build:
 ```bash
 # npm
 npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Developer
+
+[Charlene Tormes](https://www.linkedin.com/in/charlene-tormes-90023a17b/) - Senior Software Engineer
