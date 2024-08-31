@@ -1,0 +1,1 @@
+import{f as o,Q as t,q as s,o as n,c as a}from"./D5vJbw5j.js";const c={class:"p-4 bg-custom-orange-100"},l=o({__name:"index",setup(r){const e=t();return s(()=>{e.push("/calculator")}),(u,_)=>(n(),a("div",c))}});export{l as default};
