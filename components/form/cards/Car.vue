@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts" setup>
-import { formatNumberWithComma } from "../../../utilities/helpers";
+import { formatNumberWithComma, buildUrl } from "../../../utilities/helpers";
 import { HeartIcon } from "@heroicons/vue/24/solid";
 import {
     HeartIcon as OutlinedHeartIcon,
@@ -73,7 +73,7 @@ const props = defineProps({
     year: { type: Number, default: 2012 },
     thumbnailImage: {
         type: String,
-        default: "/candyspace/images/cars/city.jpg",
+        default: buildUrl("/images/cars/city.jpg"),
     },
     description: { type: String, default: "Lorem Ipsum" },
     images: { type: Array as PropType<string[]>, default: [] },

@@ -13,3 +13,7 @@ export const generateRandomNumber = (max: number): number => {
 export const formatNumberWithComma = (value: number): string => {
     return new Intl.NumberFormat("en-US").format(value);
 };
+
+export const buildUrl = (baseUrl: string, path: string) => {
+    return `${baseUrl}${path}`;
+};

@@ -13,7 +13,7 @@
             </h1>
             <img
                 class="md:w-32 w-16 md:ml-[8%] ml-[0px]"
-                :src="'/svg/ios.svg'"
+                :src="loadImage()"
                 alt="iosIcon"
             />
         </div>
@@ -61,6 +61,7 @@
     </div>
 </template>
 <script lang="ts" setup>
+import { buildUrl } from "../utilities/helpers";
 import { useAppStore } from "../stores/app.store";
 import { useHead } from "@vueuse/head";
 const appStore = useAppStore();
@@ -76,6 +77,11 @@ useHead({
         { property: "og:title", content: "Calculator" },
     ],
 });
+
+const loadImage = () => {
+    const config = useRuntimeConfig();
+    return buildUrl(config.public.baseURL, "/svg/ios.svg");
+};
 
 onMounted(() => {
     appStore.setPage("calculator");

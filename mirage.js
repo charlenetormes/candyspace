@@ -5,6 +5,11 @@ import {
     generateRandomDecimalNumber,
 } from "./utilities/helpers";
 
+const buildImageUrl = (path) => {
+    const config = useRuntimeConfig();
+    return `${config.public.baseURL}${path}`;
+};
+
 export function makeServer({ environment = "development" } = {}) {
     let server = createServer({
         environment,
@@ -53,43 +58,43 @@ export function makeServer({ environment = "development" } = {}) {
                 thumbnailImage(i) {
                     if (this.model === "Civic") {
                         const models = [
-                            "/candyspace/images/cars/city.jpg",
-                            "/candyspace/images/cars/blue-civic.jpg",
+                            buildImageUrl("/images/cars/city.jpg"),
+                            buildImageUrl("/images/cars/blue-civic.jpg"),
                         ];
                         return models[i % models.length];
                     } else if (this.model === "City") {
-                        return "/candyspace/images/cars/civic.jpg";
+                        return buildImageUrl("/images/cars/civic.jpg");
                     } else if (this.model === "BRV") {
-                        return "/candyspace/images/cars/black-brv.jpg";
+                        return buildImageUrl("/images/cars/black-brv.jpg");
                     } else if (this.model === "Everest") {
-                        return "/candyspace/images/cars/everest.jpeg";
+                        return buildImageUrl("/images/cars/everest.jpeg");
                     }
                 },
                 images() {
                     // Return an array of image URLs
                     if (this.model === "City") {
                         return [
-                            "/candyspace/images/cars/city/city1.jpg",
-                            "/candyspace/images/cars/city/city2.jpg",
-                            "/candyspace/images/cars/city/city3.jpg",
+                            buildImageUrl("/images/cars/city/city1.jpg"),
+                            buildImageUrl("/images/cars/city/city2.jpg"),
+                            buildImageUrl("/images/cars/city/city3.jpg"),
                         ];
                     } else if (this.model === "Civic") {
                         return [
-                            "/candyspace/images/cars/civic/civic1.jpg",
-                            "/candyspace/images/cars/civic/civic2.jpg",
-                            "/candyspace/images/cars/civic/civic3.jpg",
+                            buildImageUrl("/images/cars/civic/civic1.jpg"),
+                            buildImageUrl("/images/cars/civic/civic2.jpg"),
+                            buildImageUrl("/images/cars/civic/civic3.jpg"),
                         ];
                     } else if (this.model === "Everest") {
                         return [
-                            "/candyspace/images/cars/everest/ford1.jpeg",
-                            "/candyspace/images/cars/everest/ford2.jpeg",
-                            "/candyspace/images/cars/everest/ford3.jpeg",
+                            buildImageUrl("/images/cars/everest/ford1.jpeg"),
+                            buildImageUrl("/images/cars/everest/ford2.jpeg"),
+                            buildImageUrl("/images/cars/everest/ford3.jpeg"),
                         ];
                     } else if (this.model === "BRV") {
                         return [
-                            "/candyspace/images/cars/brv/brv1.jpg",
-                            "/candyspace/images/cars/brv/brv2.jpg",
-                            "/candyspace/images/cars/brv/brv3.jpg",
+                            buildImageUrl("/images/cars/brv/brv1.jpg"),
+                            buildImageUrl("/images/cars/brv/brv2.jpg"),
+                            buildImageUrl("/images/cars/brv/brv3.jpg"),
                         ];
                     } else {
                         return [];

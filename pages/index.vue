@@ -1,11 +1,11 @@
 <template>
-    <div class="p-4">
-        <h1>Test</h1>
-    </div>
+    <div class="p-4 bg-custom-orange-100"></div>
 </template>
 
 <script lang="ts" setup>
+const router = useRouter();
+
 onMounted(() => {
-    navigateTo("/candyspace/calculator");
+    router.push("/calculator");
 });
 </script>

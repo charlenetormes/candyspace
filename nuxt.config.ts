@@ -4,7 +4,9 @@ export default defineNuxtConfig({
         baseURL: "/candyspace",
     },
     runtimeConfig: {
-        baseURL: "/candyspace",
+        public: {
+            baseURL: "/candyspace",
+        },
     },
     compatibilityDate: "2024-04-03",
     devtools: { enabled: true },
