@@ -1,7 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
-        baseURL: "/candyspace",
+        baseURL: "/candyspace/",
+        buildAssetsDir: "assets",
     },
     runtimeConfig: {
         public: {

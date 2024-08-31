@@ -1,7 +1,7 @@
 <template>
     <div class="phone-container relative flex">
         <img
-            class="w-[400px] select-none z-10"
+            class="w-[400px] select-none z-10 mock-phone"
             src="/svg/ip12.svg"
             v-bind="imgAttrs"
         />
@@ -15,3 +15,11 @@ const imgAttrs = {
     style: "-webkit-user-drag: none; user-drag: none;",
 };
 </script>
+
+<style scoped>
+@media (max-width: 500px) {
+    .mock-phone {
+        min-width: 375px;
+    }
+}
+</style>

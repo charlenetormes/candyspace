@@ -7,7 +7,7 @@
             v-motion-slide-visible-once-top
         >
             <h1
-                class="md:text-5xl text-2xl w-[400px] font-semibold md:ml-[8%] ml-[0px] md:text-start sm:text-center"
+                class="md:text-5xl text-2xl w-auto md:w-[400px] font-semibold md:ml-[8%] ml-[0px] md:text-start sm:text-center"
             >
                 Use Calculator on iPhone
             </h1>
@@ -91,5 +91,11 @@ onMounted(() => {
 <style scoped>
 .calculator-container {
     min-height: calc(100vh - 136px);
+}
+
+@media (max-width: 500px) {
+    .phone-container {
+        margin-left: 8%;
+    }
 }
 </style>

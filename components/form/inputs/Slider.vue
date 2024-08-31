@@ -2,7 +2,7 @@
     <div class="w-full border-t-[1px] pt-4">
         <label
             for="default-range"
-            class="block mb-2 text-base font-medium text-gray-900"
+            class="block mb-2 text-base font-semibold text-gray-900"
             >{{ label }}</label
         >
         <v-range-slider

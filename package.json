@@ -8,7 +8,7 @@
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "deploy": "gh-pages -d .output/public"
+        "deploy": "nuxt generate && touch .output/public/.nojekyll && gh-pages --dotfiles -d .output/public"
     },
     "dependencies": {
         "@headlessui/vue": "^1.7.22",

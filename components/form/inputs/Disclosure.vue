@@ -6,7 +6,7 @@
                 <DisclosureButton
                     class="flex w-full justify-between rounded-lg bg-orange-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75"
                 >
-                    <span class="text-base">CAR BRAND</span>
+                    <span class="text-base font-semibold">CAR BRAND</span>
                     <ChevronUpIcon
                         :class="open ? 'rotate-180 transform' : ''"
                         class="h-5 w-5 text-orange-500"
@@ -20,7 +20,7 @@
                 <DisclosureButton
                     class="flex w-full justify-between rounded-lg bg-orange-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75"
                 >
-                    <span class="text-base">YEAR</span>
+                    <span class="text-base font-semibold">YEAR</span>
                     <ChevronUpIcon
                         :class="open ? 'rotate-180 transform' : ''"
                         class="h-5 w-5 text-orange-500"

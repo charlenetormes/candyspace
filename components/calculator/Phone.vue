@@ -3,7 +3,7 @@
         <div
             class="screen-container absolute top-0 w-[306px] min-h-[570px] z-20 mx-[3px] mt-[35px] mb-[20px] px-4 rounded-[16px] bg-[#17181A]"
         >
-            <div class="pt-28">
+            <div class="pt-20 md:pt-28">
                 <CalculatorExpressions :display="display" primary />
             </div>
             <div class="pt-8 w-full grid grid-cols-4 gap-5 px-1">
@@ -34,3 +34,12 @@ const handleClick = (btn: ICalculatorButton) => {
     }
 };
 </script>
+
+<style scoped>
+@media (max-width: 500px) {
+    .screen-container {
+        width: 288px;
+        min-height: 533px;
+    }
+}
+</style>
