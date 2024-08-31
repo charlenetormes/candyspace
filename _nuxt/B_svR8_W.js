@@ -1,1 +1,0 @@
-import{f as e,q as o,O as t,o as s,c as a,a as n}from"./C4XRBvCg.js";const c={class:"p-4"},_=n("h1",null,"Test",-1),r=[_],u=e({__name:"index",setup(d){return o(()=>{t("/calculator")}),(i,l)=>(s(),a("div",c,r))}});export{u as default};
