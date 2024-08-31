@@ -3,6 +3,15 @@ export default defineNuxtConfig({
     app: {
         baseURL: "/candyspace/",
         buildAssetsDir: "assets",
+        head: {
+            link: [
+                {
+                    rel: "icon",
+                    type: "image/x-icon",
+                    href: `${process.env.APP_BASE_URL}/favicon.ico`,
+                },
+            ],
+        },
     },
     runtimeConfig: {
         public: {
