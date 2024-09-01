@@ -17,7 +17,7 @@ You also need to create a .env file inside the root folder of the project
 
 ```bash
 # .env
-APP_BASE_URL="<insert base_url | '/candyspace'>"
+APP_BASE_URL="<insert base_url | 'candyspace'>"
 ```
 
 ## Development Server
@@ -27,6 +27,14 @@ Start the development server on `http://localhost:3000`:
 ```bash
 # npm
 npm run dev
+```
+
+## Unit Testing
+
+To run unit tests in the application project:
+
+```bash
+npm run test
 ```
 
 ## Deployment
